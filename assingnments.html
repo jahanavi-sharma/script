@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        1. Click button to calculate sum, multiply, modulus within one function only. Alert one after the other.
+    </p>
+    <button onclick="opreate(a,b)">
+        one function button
+    </button>
+    <p>
+        2. Click button to calculate sum, multiply, modulus with separate functions. Alert one after the other.
+    </p>
+    <button onclick="sub(a,b);add(a,b);mul(a,b);mod(a,b);">
+        separate functions button
+    </button>
+    <p>
+        3. Click button to calculate which will capture return values from independent functions - sum, multiply,
+        modulus.
+    </p>
+    <button onclick="alert(rsub(a,b)+ '/ ' + radd(a,b)+ '/ ' + rmul(a,b)+ '/ ' + rmod(a,b));">
+        return values button
+    </button>
+    <p>
+        4. What are global and local variables? Write a program to demonstrate global and local variables.
+    </p>
+    <p>
+        <strong>global variables:</strong>-->global word is relate to whole world.so,according to this word we can assume that-->these variable can execute in whole script..<br>
+        <button onclick="global(c,d)">
+            global example
+        </button><br>
+        <strong>local variable:</strong>-->local means in your area..thats why we can say that-->local variable work only in the boundry.for eg:{a=10; b=10; (a+b)}..
+    </p>
+    <button onclick="local()">
+        local example
+    </button>
+
+    <p>
+        6. Have 5 buttons with different functions. Use different operators that we discussed today.
+    </p>
+    <button onclick="add(a,b)">
+        add
+    </button>
+    <button onclick="sub(a,b)">
+        sub
+    </button>
+    <button onclick="mul(a,b)">
+        mul
+    </button>
+    <button onclick="mod(a,b)">
+        mod
+    </button>
+    <button onclick="div(a,b)">
+        div
+    </button>
+    <p>
+        7. Have two global variables a and b.<br>
+        a. Have a function add( ). Increment the value of a first and then calculate the sum of a and b.<br>
+        b. Have a function sub( ). Decrement the value of a first and then alert a-b.<br>
+        c. Have a function multiply( ). Give a local variable a=10 and then calculate the sum, subtract, divide,
+        multiply and modulus.
+    </p>
+    <button onclick="aadd(a,b)">
+        ADDITION
+    </button>
+    <button onclick="subb(a,b)">
+        SUBTRACTION
+    </button>
+    <button onclick="mull(a,b)">
+        MULTIPLICATION
+    </button>
+    <p>
+        8. Write a program to convert Fahrenheit temperature to Celsius. Formula is : C = (F - 32) * 5/9..
+    </p>
+    <button onclick="fahren(f)">
+        to celsius
+    </button>
+    <p>
+        9. How would you show the following output in alert boxes.
+        a. The name is set as : Bruce
+        b. Name is displayed as : Wayne
+    </p>
+    <button onclick="alerts(name)">
+        alert boxes.
+    </button>
+   
+</body>
+<script>
+    var a = 5;
+    var b = 20;
+
+    //calculate sum, multiply, modulus within one function only
+    function opreate(a, b) {
+        alert("sub is-->"+(a - b));
+        alert("sum is-->"+(a + b));
+        alert("multiply is-->"+(a * b));
+        alert("mod is-->"+(a % b));
+    }
+
+    //calculate sum, multiply, modulus with separate functions
+    function sub(a,b){
+        alert("sub is-->"+(a - b));
+    }
+    function add(a,b){
+        alert("sum is-->"+(a + b));
+
+    }
+    function mul(a,b){
+        alert("multiply is-->"+(a * b));
+    }
+    function mod(a,b){
+        alert("mod is-->"+(a % b));
+    }
+    function div(a,b){
+        alert("division is-->" + (a/b));
+    }
+    //calculate which will capture return values from independent functions
+    function radd(a,b){
+        return ("sum is-->"+(a + b));
+    }
+    function rsub(a,b){
+        return("sum is-->"+(a + b));
+    }
+    function rmul(a,b){
+       return ("multiply is-->"+(a * b));
+    }
+    function rmod(a,b){
+       return ("mod is-->"+(a % b));
+    }
+
+    //Write a program to demonstrate global and local variables.
+    var c = 2;
+    var d= 5;
+    function global(x,y){
+        alert(x+y);
+    }
+    
+    function local(){
+        var e = 10;
+        var f =23;
+        alert(e+f);
+    }
+
+    //to convert Fahrenheit temperature to Celsius.
+    var f = 1;
+    function fahren(a){
+       alert (a - 32) * (5/9);
+    }
+
+    // show the output in alert boxes.
+    var name = "bruce";
+    function alerts(x){
+        alert("wayne");
+    }
+
+    //Increment the value of a first and then calculate the sum of a and b.
+    function aadd(a,b){
+        sum = a+1;
+        alert ("sum is-->" + sum+b);
+    }
+
+    //Decrement the value of a first and then alert a-b.
+    function subb(a,b){
+        var sub = a-1;
+        alert ("sub is-->" + sub-b);
+    }
+
+    //c. Have a function multiply( ). Give a local variable a=10 and then calculate the sum, subtract, divide,multiply and modulus.
+
+    function mull(a,b){
+        var a =10;
+        alert('sum of local var-->' + (a+b));
+        alert('sub of local var is-->' + (a-b));
+        alert('division of local var is--> ' + (a/b));
+        alert('multiplication of local var is--> ' + (a*b));
+    }
+
+    
+</script>
+</html>
